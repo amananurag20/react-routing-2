@@ -4,9 +4,7 @@ import { Outlet } from 'react-router-dom'
 const Admin = () => {
   return (
     <div>Admin
-
-        <Outlet/>
-        
+    <Outlet/>  
     </div>
   )
 }
