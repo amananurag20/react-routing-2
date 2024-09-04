@@ -1,11 +1,11 @@
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import { format } from "date-fns";
 const Signup = () => {
-  const [currentTime, setCurrentTime]= useState(format(Date.now(),"hh:mm:ss"));
+  const [currentTime, setCurrentTime]= useState(format(Date.now(),"hh:mm:ss a"));
 
     useEffect(()=>{
       const id=setInterval(()=>{
-        setCurrentTime(format(Date.now(),"hh:mm:ss"))
+        setCurrentTime(format(Date.now(),"hh:mm:ss a"))
       },1000);
 
       return ()=>{

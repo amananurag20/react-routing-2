@@ -1,18 +1,23 @@
-import React, { useEffect, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import userContext from "../context/userContext";
 
 const About = () => {
   const [count, setCount] = useState(100);
 
-  useEffect(() => {
-    const id=setInterval(() => {
-      console.log("set Interval called");
-    }, 2000);
+  const nameData= useContext(userContext);
 
-    return ()=>{
-        console.log("return useEffect")
-        clearInterval(id)
-    }
-  }, []);
+  console.log(nameData)
+
+  // useEffect(() => {
+  //   const id=setInterval(() => {
+  //     console.log("set Interval called");
+  //   }, 2000);
+
+  //   return ()=>{
+  //       console.log("return useEffect")
+  //       clearInterval(id)
+  //   }
+  // }, []);
 
   return (
     <div>
